@@ -34,7 +34,6 @@ do
 	touch $FILENAME/result_code.txt
 	touch $FILENAME/log.txt
 
-
 	EXPECTEDCODE=$(cat $FILENAME/expected_code.txt )
 
 	#make a temp file for error logging
