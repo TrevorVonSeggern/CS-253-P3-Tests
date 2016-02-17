@@ -61,7 +61,9 @@ do
     	#exit 255
     else
 		if [ -f $FILENAME/expected.txt ]; then
-			if [ "$(diff $FILENAME/expected.txt $FILENAME/result.txt)" != "" ]; then
+			./check $FILENAME/expected.txt $FILENAME/result.txt
+			if [ "$?" != "0" ]; then
+				echo ""
 				echo -e "${RED}Error: The results of $FILENAME are different from what is expected${NONE}" 1>&2
 				#exit 255
 			fi
