@@ -19,6 +19,7 @@ GREEN='\e[0;32m';
 cd ../src
 make buildTest
 cd ../test
+make
 
 #Testing the files
 echo ''
